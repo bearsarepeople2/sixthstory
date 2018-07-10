@@ -151,30 +151,15 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/bbc.png'?>" alt="bbc">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/holiday.png'?>" alt="holiday">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/yates.png'?>" alt="yates">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/uni.png'?>" alt="uni">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/bmw.png'?>" alt="bmw">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/feelgood.png'?>" alt="feelgood">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/paint.png'?>" alt="paint">
-				</div>
-				<div class="clients__client col-md-3 col-sm-6">
-					<img src="<?php echo get_template_directory_uri() . '/assets/images/clients/subaru.png'?>" alt="subaru">
-				</div>
+				<?php
+					$args = array( 'post_type' => 'client', 'order' => 'ASC' );
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post();
+				 ?>
+				 <div class="clients__client col-md-3 col-sm-6">
+ 					<img src="<?php the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>">
+ 				</div>
+			 	<?php endwhile; ?>
 			</div>
 		</div>
 	</section>

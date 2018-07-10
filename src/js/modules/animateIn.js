@@ -5,7 +5,7 @@ function animateIn() {
     for (let i = 0; i < toAnimate.length; i++) {
       let rect = toAnimate[i].getBoundingClientRect()
       let windowHeight = window.innerHeight
-      if (rect.top < windowHeight*0.9) {
+      if (rect.top < windowHeight*0.6) {
         toAnimate[i].classList.add('animate')
       }
     }

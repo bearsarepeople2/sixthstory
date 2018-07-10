@@ -116,6 +116,9 @@ a {
   padding-bottom: 20px;
   font-size: 0.8em;
 }
+.footer__item {
+  cursor: pointer;
+}
 .menu {
   background: $purple;
   position: absolute;
@@ -177,7 +180,7 @@ a {
   text-align: center;
   color: $red;
   max-width: 650px;
-  top: 20vh;
+  padding: 20vh 0;
   position: relative;
   h1 {
     font-size: 4.5em;
@@ -261,6 +264,7 @@ i.arrow {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 40px;
   h2 {
     font-size: 2em;
     max-width: 240px;
@@ -540,6 +544,9 @@ i.arrow {
     h1 {
       font-size: 3em!important;
     }
+  }
+  i.arrow {
+    display: none;
   }
   .clients__client img {
     margin: auto;

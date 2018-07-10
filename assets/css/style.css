@@ -99,6 +99,9 @@ a {
   padding-bottom: 20px;
   font-size: 0.8em; }
 
+.footer__item {
+  cursor: pointer; }
+
 .menu {
   background: #592ed6;
   position: absolute;
@@ -155,7 +158,7 @@ a {
   text-align: center;
   color: #ff2c42;
   max-width: 650px;
-  top: 20vh;
+  padding: 20vh 0;
   position: relative; }
   .hero__quote h1 {
     font-size: 4.5em;
@@ -239,7 +242,8 @@ i.arrow {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 40px; }
   .what-we-do__box h2 {
     font-size: 2em;
     max-width: 240px;
@@ -516,6 +520,8 @@ i.arrow {
     font-size: 0.8em; }
     html h1 {
       font-size: 3em !important; }
+  i.arrow {
+    display: none; }
   .clients__client img {
     margin: auto; }
   .waves {

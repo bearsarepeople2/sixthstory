@@ -11,7 +11,20 @@
 
   add_theme_support( 'post-thumbnails' );
 
-  function register_my_menu() {
-    register_nav_menu('header-menu',__( 'Header Menu' ));
+  // Client post type
+  function clients_post_type() {
+
+  	$args = array(
+      'labels' => array(
+        'name' => __( 'Clients' ),
+        'singular_name' => __( 'Client' )
+      ),
+      'has_archive' => true,
+  		'supports'              => array('title', 'thumbnail'),
+  		'public'                => true,
+
+  	);
+  	register_post_type( 'client', $args );
+
   }
-  add_action( 'init', 'register_my_menu' );
+  add_action( 'init', 'clients_post_type' );
